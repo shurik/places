@@ -11,12 +11,13 @@ def homepage(request):
     user = facebook.get_user_from_cookie(request.COOKIES,
         settings.FACEBOOK_API['places']['app_id'],
         settings.FACEBOOK_API['places']['secret_key'])
-    graph = facebook.GraphAPI(user.get('access_token', None))
-    logging.info(graph)
-    user = graph.get_object("me")
-    logging.info(user)
-    friends = graph.get_connections(user["id"], "friends")
-    logging.info(friends)
+    if user is not None:
+        graph = facebook.GraphAPI(user.get('access_token', None))
+        logging.info(graph)
+        user = graph.get_object("me")
+        logging.info(user)
+        friends = graph.get_connections(user["id"], "friends")
+        logging.info(friends)
     return render_to_response('homepage.html', {
         
     }, context_instance=RequestContext(request))
