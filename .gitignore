@@ -27,11 +27,10 @@ src/django-robots/
 src/django-taggit/
 src/django-uni-form/
 src/django_compressor/
-src/weekendsherpa/weekendsherpa/data/
 src/facebook-python-sdk/
 src/django-breadcrumbs
 src/django-haystack
 celerybeat-schedule
 src/celerymon
-src/weekendsherpa/weekendsherpa/static/uploads/story_images
 var
+local_settings.py
