@@ -8,7 +8,8 @@ import facebook
 @csrf_exempt
 def homepage(request):
     logging.info(request)
-    user = facebook.get_user_from_cookie(settings.FACEBOOK_API['places']['app_id'],
+    user = facebook.get_user_from_cookie(request.COOKIES,
+        settings.FACEBOOK_API['places']['app_id'],
         settings.FACEBOOK_API['places']['secret_key'])
     graph = facebook.GraphAPI(user.get('access_token', None))
     logging.info(graph)
