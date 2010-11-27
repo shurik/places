@@ -20,7 +20,7 @@ def homepage(request):
         friends = graph.get_connections(user["id"], "friends")
         logging.error(friends)
         friends_info = graph.get_objects([
-            (n['id'], n['name']) for n in friends['data']
+            n['id'] for n in friends['data']
         ])
         logging.error(friends_info)
     return render_to_response('homepage.html', {
