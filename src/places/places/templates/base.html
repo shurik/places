@@ -37,7 +37,7 @@
         <h1>Places &amp; Friends</h1>
       </div>
       <div class="grid_2 omega" id="login">
-        <fb:login-button show-faces="false" width="200" max-rows="1"></fb:login-button>
+        <fb:login-button show-faces="false" width="200" max-rows="1" onclick="login();"></fb:login-button>
       </div>
     </div>
     {% block content %}
@@ -56,6 +56,19 @@
       } else {
       }
     });
+    function login() {
+      FB.login(function(response) {
+        if (response.session) {
+          if (response.perms) {
+            
+          } else {
+            
+          }
+        }
+      }, {perms: 'offline_access, user_about_me, friends_about_me,' + 
+        ' user_hometown, friends_hometown, user_likes, friends_likes, user_checkins' +
+        'friends_checkins'})
+    }
   </script>
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </body>
