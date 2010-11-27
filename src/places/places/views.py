@@ -14,11 +14,11 @@ def homepage(request):
     logging.error(user)
     if user is not None:
         graph = facebook.GraphAPI(user.get('access_token', None))
-        logging.info(graph)
+        logging.error(graph)
         user = graph.get_object("me")
-        logging.info(user)
+        logging.error(user)
         friends = graph.get_connections(user["id"], "friends")
-        logging.info(friends)
+        logging.error(friends)
     return render_to_response('homepage.html', {
         
     }, context_instance=RequestContext(request))
