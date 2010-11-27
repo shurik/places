@@ -11,6 +11,7 @@ def homepage(request):
     user = facebook.get_user_from_cookie(request.COOKIES,
         settings.FACEBOOK_API['places']['app_id'],
         settings.FACEBOOK_API['places']['secret_key'])
+    logging.error(user)
     if user is not None:
         graph = facebook.GraphAPI(user.get('access_token', None))
         logging.info(graph)
