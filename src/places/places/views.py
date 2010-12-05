@@ -16,7 +16,7 @@ def homepage(request):
         friends = graph.get_connections(user["id"], "friends")
         friends_info = graph.get_objects([n['id'] for n in friends['data']])
     return render_to_response('homepage.html', {
-        
+        'user': user
     }, context_instance=RequestContext(request))
 
 def map(request):

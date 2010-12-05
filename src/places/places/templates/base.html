@@ -33,11 +33,15 @@
 <body onload="initialize();">
   <div class="container_16 clearfix">
     <div id="header" class="grid_16 clearfix">
-      <div class="grid_13 prefix_1 alpha">
+      <div class="grid_11 prefix_1 alpha">
         <h1>People &amp; Places</h1>
       </div>
-      <div class="grid_2 omega" id="login">
+      <div class="grid_2" id="login">
+        {% if not user %}
         <fb:login-button show_faces="false" width="100" max-rows="1" perms='offline_access, user_about_me, friends_about_me, user_hometown, friends_hometown, user_likes, friends_likes, user_checkins, friends_checkins'></fb:login-button>
+        {% endif %}
+      </div>
+      <div class="grid_2 omega" id="like">
         <fb:like layout="button_count" show_faces="false" width="100"></fb:like>
       </div>
     </div>
