@@ -14,6 +14,7 @@ urlpatterns = patterns(
     (r'^admin/filebrowser/', include('filebrowser.urls')),
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
+    (r'^map/', 'places.views.map'),
     (r'^$', 'places.views.homepage'),
 )
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8" />
+  <title>Map</title>
+  <link rel="stylesheet" type="text/css" media="all" href="/static/css/960/reset.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/static/css/960/text.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/static/css/960/960.css" />
+  <script src="/static/js/jquery-1.4.3.min.js" type="text/javascript"></script>
+  <script src="/static/js/raphael-min.js"></script>
+  <script src="/static/js/scale.raphael.js"></script>
+  <script>
+    $(function() {
+      var drawing = new ScaleRaphael("drawing", $(window).width(), $(window).height());
+      var circle = drawing.circle($(window).width() / 2, $(window).height() / 2, 10).attr({
+        fill: 'red',
+        stroke: 'gray'
+      });
+      function resizeDrawing() {
+        var win = $(this);
+        drawing.changeSize(win.width(), win.height(), true, false);
+      }
+      resizeDrawing();
+      $(window).resize(resizeDrawing);
+    })
+  </script>
+</head>
+<body>
+{% block content %}
+  <div id="drawing"></div>
+{% endblock %}
+</body>
+</html>

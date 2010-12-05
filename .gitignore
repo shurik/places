@@ -34,3 +34,5 @@ celerybeat-schedule
 src/celerymon
 var
 local_settings.py
+data
+mapnik_examples
