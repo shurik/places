@@ -9,6 +9,11 @@ This is a `buildout <http://www.buildout.org/>`_ for a `Django <http://djangopro
 
 The site's visitor is given the opportunity to login to their Facebook account and grant the web site the permission to read their Facebook profile and profiles of their friends. The site will then use the text and images to create a visual collage and display it back to the visitor and allow them to download an image of the collage to their personal computer and post about the site on Facebook.
 
+The development version of the site resides at the following URL:
+
+
+`http://places.theotheralex.com/ <http://places.theotheralex.com/>`_
+
 .. [#] This is a working title that references a possible emphasis for organizing the image, as a map of one's friends.
 
 References
