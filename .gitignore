@@ -36,3 +36,4 @@ var
 local_settings.py
 data
 mapnik_examples
+fabfile.py

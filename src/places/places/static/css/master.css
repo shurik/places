@@ -22,3 +22,7 @@
   color: #ccc;
   padding-top: 10px;
 }
+
+#footer p {
+  margin-bottom: 0;
+}
