@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{% block page_title %}Home{% endblock %} - Places and Friends</title>
+  <title>{% block page_title %}Home{% endblock %} - People and Places</title>
   <meta charset="utf-8" />
   <meta name="description" content="{% block description %}{{ description }}{% endblock %}" />
   <meta name="keywords" content="{% block keywords %}{{ keywords }}{% endblock %}" />
-  <meta property="og:title" content="{% block page_fb_title %}Home{% endblock %} - Places and Friends" />
+  <meta property="og:title" content="{% block page_fb_title %}Home{% endblock %} - People and Places" />
   <meta property="og:type" content="art" />
   <meta property="og:image" content="{% block page_fb_image %}http://{{ site.domain }}/static/images/logo.jpg{% endblock %}" />
   <meta property="og:url" content="{% block page_fb_url %}{{ site.domain }}{% endblock %}" />
-  <meta property="og:site_name" content="Places and Friends" />
-  <meta property="og:description" content="Places and Friends" />
+  <meta property="og:site_name" content="People and Places" />
+  <meta property="og:description" content="People and Places" />
   <meta property="fb:app_id" content="{{ app_id }}"/>
   <link rel="stylesheet" type="text/css" media="all" href="/static/css/960/reset.css" />
   <link rel="stylesheet" type="text/css" media="all" href="/static/css/960/text.css" />
@@ -34,10 +34,11 @@
   <div class="container_16 clearfix">
     <div id="header" class="grid_16 clearfix">
       <div class="grid_13 prefix_1 alpha">
-        <h1>Places &amp; Friends</h1>
+        <h1>People &amp; Places</h1>
       </div>
       <div class="grid_2 omega" id="login">
         <fb:login-button show-faces="false" width="200" max-rows="1" perms='offline_access, user_about_me, friends_about_me, user_hometown, friends_hometown, user_likes, friends_likes, user_checkins, friends_checkins'></fb:login-button>
+        <fb:like-button show-faces="false"/>
       </div>
     </div>
     {% block content %}
@@ -45,6 +46,7 @@
     <div id="footer" class="grid_16">
       <p>&copy; {% now "Y" %} Aleksandr Vladimirskiy All Rights Reserved.</p>
       <sub>Requires a recent version of Firefox, Safari or Chrome with JavaScript and cookies enabled.</sub>
+      <sub><em>Source code for this application is available on <a href="https://github.com/shurik/places">GitHub</a></em></sub>
     </div>
   </div>
   <div id="fb-root"></div>
