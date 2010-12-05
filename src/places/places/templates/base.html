@@ -37,16 +37,16 @@
         <h1>People &amp; Places</h1>
       </div>
       <div class="grid_2 omega" id="login">
-        <fb:login-button show-faces="false" width="200" max-rows="1" perms='offline_access, user_about_me, friends_about_me, user_hometown, friends_hometown, user_likes, friends_likes, user_checkins, friends_checkins'></fb:login-button>
-        <fb:like-button show-faces="false"/>
+        <fb:login-button show_faces="false" width="100" max-rows="1" perms='offline_access, user_about_me, friends_about_me, user_hometown, friends_hometown, user_likes, friends_likes, user_checkins, friends_checkins'></fb:login-button>
+        <fb:like layout="button_count" show_faces="false" width="100"></fb:like>
       </div>
     </div>
     {% block content %}
     {% endblock %}
     <div id="footer" class="grid_16">
       <p>&copy; {% now "Y" %} Aleksandr Vladimirskiy All Rights Reserved.</p>
-      <sub>Requires a recent version of Firefox, Safari or Chrome with JavaScript and cookies enabled.</sub>
-      <sub><em>Source code for this application is available on <a href="https://github.com/shurik/places">GitHub</a></em></sub>
+      <p><sub>Requires a recent version of Firefox, Safari or Chrome with JavaScript and cookies enabled.</sub></p>
+      <p><sub><em>Source code for this application is available on <a href="https://github.com/shurik/places">GitHub</a></em></sub></p>
     </div>
   </div>
   <div id="fb-root"></div>
